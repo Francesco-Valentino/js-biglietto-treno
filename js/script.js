@@ -4,6 +4,14 @@ let userJourney = parseInt(prompt("Inserisci qui la quantità di km che vuoi per
 document.getElementById("yourAgeIs").innerHTML += userAge + " anni";
 document.getElementById("yourJourneyIs").innerHTML += userJourney + " km";
 
-const ticketCost = 0.21 * userJourney;
+let ticketCost = 0.21 * userJourney;
+const underEighteenDiscount = (20 / 100) * ticketCost
+const overSixtyfiveDiscount = (40 / 100) * ticketCost
+
+if (userAge < 18){
+    ticketCost -= underEighteenDiscount 
+} if else (userAge >= 65){
+    ticketCost -= overSixtyfiveDiscount
+}
 
 document.getElementById("ticketPrice").innerHTML += ticketCost
