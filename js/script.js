@@ -10,7 +10,7 @@ const overSixtyfiveDiscount = (40 / 100) * ticketCost
 
 if (userAge < 18){
     ticketCost -= underEighteenDiscount 
-} if else (userAge >= 65){
+} else if (userAge >= 65){
     ticketCost -= overSixtyfiveDiscount
 }
 
